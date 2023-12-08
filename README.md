@@ -17,3 +17,4 @@ They also want to display the status of that most recent test directly in the re
 - Successfully building the project will create a artifact named `report.txt`.
 - Review the contents of the report for more information.
 
+[![Build Status](http://34.131.59.153:8080/buildStatus/icon?job=github-challenge-pipeline)](http://34.131.59.153:8080/job/github-challenge-pipeline/)
