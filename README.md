@@ -4,3 +4,4 @@ Jenkins can retrieve pipeline configurations from version control systems like G
 
 [![Build Status](http://34.131.59.153:8080/buildStatus/icon?job=connect-github-pipeline)](http://34.131.59.153:8080/job/connect-github-pipeline/)
 http://34.131.59.153:8080/buildStatus/text?job=connect-github-pipeline
+[![Build Status](http://34.131.59.153:8080/job/connect-github-pipeline/badge/icon)](http://34.131.59.153:8080/job/connect-github-pipeline/)
