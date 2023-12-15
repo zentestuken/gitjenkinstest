@@ -1,6 +1,6 @@
 # Challenge Connect Jenkins to GitHub
 
-[![Build Status](http://34.131.59.153:8080/buildStatus/icon?job=github-challenge-pipeline)](http://34.131.59.153:8080/job/github-challenge-pipeline/)
+[![Build Status](http://34.131.59.153:8080/buildStatus/icon?job=Engineering-Jobs%2Fgithub-challenge-pipeline)](http://34.131.59.153:8080/job/Engineering-Jobs/job/github-challenge-pipeline/)
 
 You're on a team developing an algorithm that calculates the value of pi.
 
