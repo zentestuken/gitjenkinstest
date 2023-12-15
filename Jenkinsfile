@@ -1,28 +1,31 @@
 pipeline {
-    agent any
-    options {
-        buildDiscarder(logRotator(daysToKeepStr: '10', numToKeepStr: '10'))
-        timeout(time: 12, unit: 'HOURS')
-        timestamps()
+    agent { label 'linux' }
+    environment {
+        LOGIN = credentials('login')
+        SECRET = credentials('20181301-2f5b-414a-a85b-644568fb9403')
     }
+      
     stages {
-        stage('Requirements') {
+        stage('Show-off') {
             steps {
-                // this step is required to make sure the script
-                // can be executed directly in a shell
-                sh('chmod +x ./algorithm.sh')
-            }
-        }
-        stage('Build') {
-            steps {
-                // the algorithm script creates a file named report.txt
-                sh('./algorithm.sh')
-
-                // this step archives the report
-                archiveArtifacts allowEmptyArchive: true,
-                    artifacts: '*.txt',
-                    fingerprint: true,
-                    onlyIfSuccessful: true
+                withCredentials([string(credentialsId: '58cfe39f-0ec9-4499-9440-4342414b8d14', variable: 'API_KEY')]) {
+                    script {
+                        echo "API key:";
+                        echo env.API_KEY.toCharArray().join(' ');
+                        echo "- - -";
+                    }
+                }
+                script {
+                    echo "Password:";
+                        echo env.LOGIN_PSW.toCharArray().join(' ');
+                        echo "- - -";
+                }
+                echo "Username: ${env.LOGIN_USR}"
+                script {
+                   echo "The secret:";
+                        echo env.SECRET.toCharArray().join(' ');
+                        echo "- - -";
+                }
             }
         }
     }
